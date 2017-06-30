@@ -18,7 +18,6 @@ function onBeforeCartUpdate(&$cartClass,&$cart,$product_id,$quantity,$add,$type,
 
 		$cartClass->update(47,1);
 
-		return true;
 }
 
 
