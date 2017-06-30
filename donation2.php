@@ -6,7 +6,7 @@
 // You need to extend from the hikashopPaymentPlugin class which already define lots of functions in order to simplify your work
 class plgHikashopDonation2 extends hikashopPaymentPlugin
 {
-	function plgHikashopDonation2(&$subject, $config){
+	function plgHikashopDonation3(&$subject, $config){
 		parent::__construct($subject, $config);
 	}
 
