@@ -11,6 +11,6 @@
 	<description>This plugin enables you to setup your Example payment system</description>
 	<files>
 		<filename plugin="donation2">donation2.php</filename>
-		<filename>example_end.php</filename>
+		
 	</files>
 </extension>
