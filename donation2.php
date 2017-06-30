@@ -1,6 +1,6 @@
 <?php
 /*
-* A payment plugin called "example". This is the main file of the plugin.
+* A payment plugin called "Donation2". This is the main file of the plugin.
 */
 
 // You need to extend from the hikashopPaymentPlugin class which already define lots of functions in order to simplify your work
@@ -10,7 +10,7 @@ class plgHikashopDonation2 extends hikashopPaymentPlugin
 		parent::__construct($subject, $config);
 	}
 
-	// Call a trigger, in this example: onBeforeOrderCreate
+	// Call a trigger, in this example: onBeforecartSave
 function onBeforeCartSave(&$element,&$do) {
 	if(!@include_once(rtrim(JPATH_ADMINISTRATOR,DS).DS.'components'.DS.'com_hikashop'.DS.'helpers'.DS.'helper.php')){ return false; }
 
