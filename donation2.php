@@ -27,10 +27,11 @@ if ($cart2) {
 	    echo ($productID[$i]);
     }
     if (in_array("48", $productID)) {
-
+echo("here");
 echo("<div class='alert alert-success'><strong>Thank you!</strong> Your donation is greatly appreciated.</div>");
     } else {
 echo("<div class='alert alert-warning'><strong><a href='/index.php?option=com_hikashop&ctrl=product&task=updatecart&product_id=47&quantity=1&checkout=2'>Click here to add £35 ( or your choice of amount) </a></strong> to your order for our new pitch fund.</div>");
+    echo ("not ehre");
     }
 //echo ("<div='alert alert-warning'><strong>".$numberOfProducts."</strong></div>");
 }
