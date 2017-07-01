@@ -16,7 +16,7 @@ function onAfterCartUpdate(&$cartClass,&$cart,$product_id,$quantity,$add,$type,$
 
 	
 	$donationproductID = 47;
-	echo ("Updated Product_ID=".implode(" ",$product_id);
+	echo ("Updated Product_ID=".implode(" ",$product_id));
 	// if the update just changed a product with ID = donationproductID then dont do anything more as we dont want to add it again
 if ($product_id != $donationproductID) {
 	
