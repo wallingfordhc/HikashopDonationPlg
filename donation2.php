@@ -24,6 +24,7 @@ if ($cart2) {
 	$cartkeys = array_keys($cart2);
     for ($i = 0; $i < $numberOfProducts; $i++) {
         $productID[$i] = $cart2[$cartkeys[$i]]->product_id;
+	    echo ($productID[$i]);
     }
     if (in_array("48", $productID)) {
 
