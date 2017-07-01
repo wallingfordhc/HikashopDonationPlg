@@ -20,7 +20,7 @@ function onBeforeCartUpdate(&$cartClass,&$cart,$product_id,$quantity,$add,$type,
 	
 $cart2      = $cartClass->get();
 if ($cart2) {
-    $numberOfProducts = array_keys($cart2);
+    $numberOfProducts = count($cart2);
     //for ($i = 0; $i < $numberOfProducts; $i++) {
     //    $productID[$i] = $cart2[$i]->product_id;
     //}
