@@ -21,15 +21,16 @@ function onBeforeCartUpdate(&$cartClass,&$cart,$product_id,$quantity,$add,$type,
 $cart2      = $cartClass->get();
 if ($cart2) {
     $numberOfProducts = array_keys($cart2);
-    for ($i = 0; $i < $numberOfProducts; $i++) {
-        $productID[$i] = $cart2[$i]->product_id;
-    }
-    if (in_array("47", $productID[1])) {
+    //for ($i = 0; $i < $numberOfProducts; $i++) {
+    //    $productID[$i] = $cart2[$i]->product_id;
+    //}
+    //if (in_array("48", $productID[1])) {
 
-echo("<div class='alert alert-success'><strong>Thank you!</strong> Your donation is greatly appreciated.</div>");
-    } else {
-echo("<div class='alert alert-warning'><strong><a href='/index.php?option=com_hikashop&ctrl=product&task=updatecart&product_id=47&quantity=1&checkout=2'>Click here to add £35 ( or your choice of amount) </a></strong> to your order for our new pitch fund.</div>");
-    }
+//echo("<div class='alert alert-success'><strong>Thank you!</strong> Your donation is greatly appreciated.</div>");
+//    } else {
+//echo("<div class='alert alert-warning'><strong><a href='/index.php?option=com_hikashop&ctrl=product&task=updatecart&product_id=47&quantity=1&checkout=2'>Click here to add £35 ( or your choice of amount) </a></strong> to your order for our new pitch fund.</div>");
+//    }
+echo ("<div='alert alert-warning'><strong>hello</div>");
 }
 
 }
