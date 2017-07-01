@@ -16,7 +16,7 @@ function onAfterCartProductsLoad(&$cart) {
 
 		$cartClass = hikashop_get('class.cart');
 
-		$cartClass->update(47,1);
+		$cartClass->update(47,1,$add=0,$type='product',$resetCartWhenUpdate=true,$force=false);
 
 }
 
