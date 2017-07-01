@@ -11,9 +11,10 @@ class plgHikashopDonation2 extends hikashopPaymentPlugin
 	}
 
 	// Call a trigger, AfterProductsLoad - 
-function onBeforeCartUpdate(&$cartClass,&$cart,$product_id,$quantity,$add,$type,$resetCartWhenUpdate,$force,&$do) {
+function onAfterCartUpdate(&$cartClass,&$cart,$product_id,$quantity,$add,$type,$resetCartWhenUpdate,$force) {
 	if(!@include_once(rtrim(JPATH_ADMINISTRATOR,DS).DS.'components'.DS.'com_hikashop'.DS.'helpers'.DS.'helper.php')){ return false; }
 
+	$donationproductID = 47;
 		$cartClass = hikashop_get('class.cart');
 
 		
@@ -27,11 +28,11 @@ if ($cart2) {
 	    echo ($productID[$i]);
     }
 	//check to see if the donation product is included in the cart - if not add it
-    if (in_array("48", $productID)) {
+    if (in_array($donationproductID, $productID)) {
 	    echo ("thanks");
     } else {
 	    // add product with product_id = 48 to the cart
-	$cartClass->update(48,1,$add=0,$type='product',$resetCartWhenUpdate=true,$force=false);
+	$cartClass->update($donationproductID,1,$add=0,$type='product',$resetCartWhenUpdate=true,$force=false);
     echo ("not here");
     }
 }
