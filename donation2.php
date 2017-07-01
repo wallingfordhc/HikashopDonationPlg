@@ -24,7 +24,7 @@ if ($cart2) {
     for ($i = 0; $i < $numberOfProducts; $i++) {
         $productID[$i] = $cart2->products[$i]->product_id;
     }
-    if (in_array("47", $productID)) {
+    if (in_array("47", $productID[1])) {
 
 echo("<div class='alert alert-success'><strong>Thank you!</strong> Your donation is greatly appreciated.</div>");
     } else {
