@@ -14,15 +14,15 @@ class plgHikashopDonation2 extends hikashopPaymentPlugin
 function onAfterCartProductsLoad(&$cart) {
 	if(!@include_once(rtrim(JPATH_ADMINISTRATOR,DS).DS.'components'.DS.'com_hikashop'.DS.'helpers'.DS.'helper.php')){ return false; }
 
-		//$cartClass = hikashop_get('class.cart');
+		$cartClass = hikashop_get('class.cart');
 
 		//$cartClass->update(47,1,$add=0,$type='product',$resetCartWhenUpdate=true,$force=false);
 	
-//$cart2      = $cartClass->loadFullCart(true);
-if ($cart) {
-    $numberOfProducts = count($cart->products);
+$cart2      = $cartClass->loadFullCart(true);
+if ($cart2) {
+    $numberOfProducts = count($cart2->products);
     for ($i = 0; $i < $numberOfProducts; $i++) {
-        $productID[$i] = $cart->products[$i]->product_id;
+        $productID[$i] = $cart2->products[$i]->product_id;
     }
     if (in_array("47", $productID)) {
 
