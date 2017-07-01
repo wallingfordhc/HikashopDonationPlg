@@ -14,7 +14,7 @@ class plgHikashopDonation2 extends hikashopPaymentPlugin
 function onAfterCartProductsLoad(&$cart) {
 	if(!@include_once(rtrim(JPATH_ADMINISTRATOR,DS).DS.'components'.DS.'com_hikashop'.DS.'helpers'.DS.'helper.php')){ return false; }
 
-		//$cartClass = hikashop_get('class.cart');
+		$cartClass = hikashop_get('class.cart');
 
 		//$cartClass->update(47,1,$add=0,$type='product',$resetCartWhenUpdate=true,$force=false);
 	
