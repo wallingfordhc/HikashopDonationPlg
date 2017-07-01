@@ -10,13 +10,13 @@ class plgHikashopDonation2 extends hikashopPaymentPlugin
 		parent::__construct($subject, $config);
 	}
 
-	// Call a trigger, AFterProductsLoad
+	// Call a trigger, AfterProductsLoad - 
 function onBeforeCartUpdate(&$cartClass,&$cart,$product_id,$quantity,$add,$type,$resetCartWhenUpdate,$force,&$do) {
 	if(!@include_once(rtrim(JPATH_ADMINISTRATOR,DS).DS.'components'.DS.'com_hikashop'.DS.'helpers'.DS.'helper.php')){ return false; }
 
 		$cartClass = hikashop_get('class.cart');
 
-		//$cartClass->update(47,1,$add=0,$type='product',$resetCartWhenUpdate=true,$force=false);
+		
 	
 $cart2      = $cartClass->get();
 if ($cart2) {
@@ -26,14 +26,14 @@ if ($cart2) {
         $productID[$i] = $cart2[$cartkeys[$i]]->product_id;
 	    echo ($productID[$i]);
     }
+	//check to see if the donation product is included in the cart - if not add it
     if (in_array("48", $productID)) {
-echo("here");
-echo("<div class='alert alert-success'><strong>Thank you!</strong> Your donation is greatly appreciated.</div>");
+	    echo ("thanks");
     } else {
-echo("<div class='alert alert-warning'><strong><a href='/index.php?option=com_hikashop&ctrl=product&task=updatecart&product_id=47&quantity=1&checkout=2'>Click here to add £35 ( or your choice of amount) </a></strong> to your order for our new pitch fund.</div>");
-    echo ("not ehre");
+	    // add product with product_id = 48 to the cart
+	$cartClass->update(48,1,$add=0,$type='product',$resetCartWhenUpdate=true,$force=false);
+    echo ("not here");
     }
-//echo ("<div='alert alert-warning'><strong>".$numberOfProducts."</strong></div>");
 }
 
 }
