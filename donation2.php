@@ -18,7 +18,7 @@ function onBeforeCartUpdate(&$cartClass,&$cart,$product_id,$quantity,$add,$type,
 
 		//$cartClass->update(47,1,$add=0,$type='product',$resetCartWhenUpdate=true,$force=false);
 	
-$cart2      = $cartClass->loadFullCart();
+$cart2      = $cartClass->get();
 if ($cart2) {
     $numberOfProducts = count($cart2->products);
     for ($i = 0; $i < $numberOfProducts; $i++) {
